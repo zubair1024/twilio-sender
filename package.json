@@ -1,0 +1,34 @@
+{
+  "name": "twilio-super-sim-sms",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "",
+  "main": "index.mjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint . --ext .mjs,.js",
+    "prepare": "husky",
+    "precommit": "lint-staged",
+    "start": "node --experimental-json-modules --experimental-modules index.mjs",
+    "prod:start": "NODE_ENV=production pm2 start index.mjs --name service --merge-logs --log-date-format=\"YYYY-MM-DD HH:mm\""
+  },
+  "keywords": [],
+  "author": "Zubair Ahmed",
+  "license": "ISC",
+  "dependencies": {
+    "config": "^3.3.11",
+    "tracer": "^1.3.0",
+    "twilio": "^4.23.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.23.9",
+    "@babel/eslint-parser": "^7.23.10",
+    "@babel/preset-env": "^7.23.9",
+    "@types/node": "^20.11.25",
+    "eslint": "^8.56.0",
+    "eslint-plugin-import": "^2.29.1",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.2",
+    "prettier": "^3.2.5"
+  }
+}
